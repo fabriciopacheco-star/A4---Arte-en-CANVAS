@@ -1,1 +1,91 @@
-<a href="actividades/a4/index.html">Actividad 04 — Galería y Canvas</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A4 Arte en Canvas — Menú</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card-bg: #131924;
+      --border: #1f2937;
+      --text: #f3f4f6;
+      --accent: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #9ca3af;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-link {
+      display: inline-block;
+      width: 100%;
+      padding: 1rem;
+      background-color: var(--accent);
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-link:hover {
+      background-color: #2563eb;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>A4 Arte en Canvas</h1>
+    <p>Proyecto de galería web con arte geométrico y animación en Canvas.</p>
+    
+    <a href="actividades/a4/index.html" class="btn-link">
+      Ver Actividad 04 →
+    </a>
+  </div>
+
+</body>
+</html>
