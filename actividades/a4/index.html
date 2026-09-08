@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A4 Arte en Canvas — Fabricio Pacheco</title>
+  <title>Galería Personal — Fabricio Pacheco</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -104,22 +104,6 @@
       display: block;
     }
 
-    .canvas-container {
-      width: 100%;
-      background-color: #05070a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-    }
-
-    canvas {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      background-color: #0d1117;
-    }
-
     .card-content {
       padding: 1.5rem;
     }
@@ -175,10 +159,10 @@
 <body>
 
   <div class="container">
-    <header>
+    header>
       <span class="badge">Actividad 04</span>
-      <h1>Fabricio Pacheco Rendón</h1>
-      <p class="subtitle">Galería de fotos personales y prácticas en Canvas con JavaScript.</p>
+      <h1>Galería Personal</h1>
+      <p class="subtitle">Fabricio Pacheco Rendón</p>
     </header>
 
     <main class="gallery">
@@ -243,99 +227,15 @@
         </div>
       </article>
 
-      <!-- Tarjeta 6: Canvas Arte -->
-      <article class="item-card" id="canvas-section">
-        <div class="canvas-container">
-          <canvas id="canvasArte" width="600" height="380"></canvas>
-        </div>
-        <div class="card-content">
-          <span class="card-tag">CANVAS 2D</span>
-          <h2>Arte Geometrico</h2>
-          <p>Un diseño hecho solo con rectángulos, colores con transparencia y bordes dibujados directo con Canvas en JavaScript.</p>
-        </div>
-      </article>
-
-      <!-- Tarjeta 7: Canvas Animación -->
-      <article class="item-card">
-        <div class="canvas-container">
-          <canvas id="canvasAnimacion" width="600" height="380"></canvas>
-        </div>
-        <div class="card-content">
-          <span class="card-tag">ANIMACIÓN</span>
-          <h2>Bucle de Movimiento</h2>
-          <p>Una animación sencilla donde un cuadrado se mueve de un lado a otro rebotando cuando choca con las paredes del cuadro.</p>
-        </div>
-      </article>
-
     </main>
 
-    <!-- Botón de regresar -->
+    <!-- Botón de regresar al menú -->
     <div class="nav-footer">
       <a href="../../index.html" class="btn-back">
         ← Volver al Menú Principal
       </a>
     </div>
   </div>
-
-  <script>
-    // --- 1. ARTE GEOMÉTRICO (CANVAS 1) ---
-    const canvas1 = document.getElementById('canvasArte');
-    const ctx1 = canvas1.getContext('2d');
-
-    ctx1.fillStyle = '#0d1117';
-    ctx1.fillRect(0, 0, canvas1.width, canvas1.height);
-
-    ctx1.fillStyle = '#3b82f6';
-    ctx1.fillRect(60, 50, 200, 280);
-
-    ctx1.fillStyle = 'rgba(239, 68, 68, 0.85)';
-    ctx1.fillRect(210, 90, 260, 160);
-
-    ctx1.fillStyle = 'rgba(245, 158, 11, 0.9)';
-    ctx1.fillRect(160, 210, 310, 90);
-
-    ctx1.fillStyle = '#10b981';
-    ctx1.fillRect(420, 70, 110, 110);
-
-    ctx1.fillStyle = '#ffffff';
-    ctx1.fillRect(90, 80, 40, 40);
-    ctx1.fillRect(440, 240, 30, 30);
-
-    ctx1.strokeStyle = '#60a5fa';
-    ctx1.lineWidth = 3;
-    ctx1.strokeRect(30, 30, 540, 320);
-
-    // --- 2. ANIMACIÓN BÁSICA (CANVAS 2) ---
-    const canvas2 = document.getElementById('canvasAnimacion');
-    const ctx2 = canvas2.getContext('2d');
-
-    let posX = 40;
-    let posY = 165;
-    let tamano = 50;
-    let velocidadX = 5;
-
-    function loopAnimacion() {
-      ctx2.fillStyle = '#0d1117';
-      ctx2.fillRect(0, 0, canvas2.width, canvas2.height);
-
-      ctx2.fillStyle = '#3b82f6';
-      ctx2.fillRect(posX, posY, tamano, tamano);
-
-      ctx2.strokeStyle = '#93c5fd';
-      ctx2.lineWidth = 2;
-      ctx2.strokeRect(posX, posY, tamano, tamano);
-
-      posX += velocidadX;
-
-      if (posX + tamano > canvas2.width || posX < 0) {
-        velocidadX *= -1;
-      }
-
-      requestAnimationFrame(loopAnimacion);
-    }
-
-    loopAnimacion();
-  </script>
 
 </body>
 </html>
